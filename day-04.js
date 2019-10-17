@@ -14,14 +14,15 @@ function padIt(str, n) {
 
 // https://www.codewars.com/kata/training-js-number-10-loop-statement-for/train/javascript
 function pickIt(arr) {
-  const odd = [], even = [];
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] % 2 === 0) {
-        even.push(arr[i]);
-      } else {
-        odd.push(arr[i]);
-      }
+  const odd = [],
+    even = [];
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 === 0) {
+      even.push(arr[i]);
+    } else {
+      odd.push(arr[i]);
     }
+  }
   return [odd, even];
 }
 
@@ -35,7 +36,7 @@ function grabDoll(dolls) {
     } else {
       continue;
     }
-    
+
     if (bag.length >= 3) {
       break;
     }
@@ -53,7 +54,7 @@ function giveMeFive(obj) {
       arr.push(key);
     }
     if (val.length === 5) {
-    arr.push(val);
+      arr.push(val);
     }
   }
   return arr;
