@@ -27,9 +27,7 @@ function colorOf(r, g, b) {
 function howManySmaller(arr, n) {
   let smallerNum = 0;
   for (let i = 0; i < arr.length; i++) {
-    if (n > arr[i].toFixed(2)) {
-      smallerNum++;
-    }
+    if (n > arr[i].toFixed(2)) smallerNum++;
   }
   return smallerNum;
 }
