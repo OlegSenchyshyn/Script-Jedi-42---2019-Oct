@@ -13,10 +13,10 @@ function alienLanguage(str){
 
 //https://www.codewars.com/kata/training-js-number-20-methods-of-string-object-charat-charcodeat-and-fromcharcode/train/javascript
 
-//Це на жаль не мій розв'язок, але максимально зрозумілий для мене
+//Це на жаль не мій розв'язок, але я змінив його під себе
 function topSecret(str) {
-  var chars = str.split('');
-  for (var i = 0; i < chars.length; i++)
+  let chars = str.split('');
+  for (let i = 0; i < chars.length; i++)
     if (chars[i] === ' ' || chars[i] === '!') {
     } else if (chars[i] == 'A') {
       chars[i] = 'X';
@@ -44,3 +44,7 @@ answer3 = 'Barbie doll';
 
 
 //https://www.codewars.com/kata/training-js-number-21-methods-of-string-object-trim-and-the-string-template/train/javascript
+function fiveLine(s) {
+  const i = s.trim();
+  return `${i}\n${i.repeat(2)}\n${i.repeat(3)}\n${i.repeat(4)}\n${i.repeat(5)}`;
+}
