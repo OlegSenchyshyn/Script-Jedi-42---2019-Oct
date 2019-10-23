@@ -13,7 +13,7 @@ function alienLanguage(str){
 
 //https://www.codewars.com/kata/training-js-number-20-methods-of-string-object-charat-charcodeat-and-fromcharcode/train/javascript
 
-//Це на жаль не мій розв'язок, але код я змінив його під себе
+//Це на жаль не мій розв'язок, але код я змінив під себе
 function topSecret(str) {
   const chars = str.split('');
   for (let i = 0; i < chars.length; i++)
