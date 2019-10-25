@@ -9,27 +9,27 @@ describe('`Set` lets you store unique values of any type', function(){
     assert.equal(typeof Set, typeOfSet);
   });
   it('every value in a set is unique', function() {
-    let set = new Set();
+    const set = new Set();
     set.add(1);
     set.add(1);
     const expectedSize = 1;
     assert.equal(set.size, expectedSize);
   });
   it('the string "1" is different to the number 1', function() {
-    let set = new Set();
+    const set = new Set();
     set.add(1);
     set.add('1');
     
     assert.equal(set.size, 2);
   });
   it('even NaN is equal to NaN', function() {
-    let set = new Set();
+    const set = new Set();
     set.add(NaN);
     set.add(NaN);
     assert.equal(set.size, 1);
   });
   it('+0 and -0 are seen as equal', function() {
-    let set = new Set();
+    const set = new Set();
     set.add('-0');
     set.add('-0');
     assert.deepEqual([...set.values()], [+0]);
@@ -212,7 +212,7 @@ describe('`clear()` removes all elements from a Set object.', function() {
   it('`set.size` becomes 0', function() {
     set.add('one').add(2);
     set.clear();
-    let expectedSize = 0;
+    const expectedSize = 0;
     assert.equal(set.size, expectedSize);
   });
   it('the iterator `set.entries()` will not contain any items', function() {
@@ -227,7 +227,7 @@ describe('`clear()` removes all elements from a Set object.', function() {
     assert.deepEqual(set.has(2), false);
   });
   it('returns `undefined`', function() {
-    var expectedReturn;
+    let expectedReturn;
     assert.equal(set.clear(), expectedReturn);
   });
 });
