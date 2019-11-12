@@ -8,3 +8,9 @@ const myObj = Object.create(MyObject.prototype);
 //_________________________________________________________              
 // Replicate new
 // http://www.codewars.com/kata/replicate-new
+
+function nouveau(Constructor, ...args) {
+  const thisValue = Object.create(Constructor.prototype);
+  const result = Constructor.apply(thisValue, args);
+  return (typeof result === 'object' || typeof result === 'function') && result !== null ? result : thisValue;
+}
